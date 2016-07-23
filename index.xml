@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My blog </title>
+    <title>My Site </title>
     <link>http://haibin.github.com/</link>
     <language>en-us</language>
     <author>Haibin Liu</author>
     <rights>(C) 2016</rights>
-    <updated>2016-07-22 22:32:08 &#43;0800 SGT</updated>
+    <updated>2016-07-23 23:08:58 &#43;0800 SGT</updated>
 
     
       
         <item>
-          <title>good to great</title>
-          <link>http://haibin.github.com/post/good-to-great/</link>
-          <pubDate>Fri, 22 Jul 2016 22:32:08 SGT</pubDate>
+          <title>first</title>
+          <link>http://haibin.github.com/post/first/</link>
+          <pubDate>Sat, 23 Jul 2016 23:08:58 SGT</pubDate>
           <author>Haibin Liu</author>
-          <guid>http://haibin.github.com/post/good-to-great/</guid>
-          <description>&lt;p&gt;I read &lt;strong&gt;Good to Great in January 2016&lt;/strong&gt;. An awesome read sharing detailed analysis on how good companies became great.&lt;/p&gt;
+          <guid>http://haibin.github.com/post/first/</guid>
+          <description>&lt;p&gt;This is the beginning post of the new site.&lt;/p&gt;
 </description>
         </item>
       
