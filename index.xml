@@ -6,8 +6,24 @@
     <language>en-us</language>
     <author>Haibin Liu</author>
     <rights>(C) 2016</rights>
-    <updated>2016-07-24 00:01:58 &#43;0800 SGT</updated>
+    <updated>2016-07-25 23:09:02 &#43;0800 SGT</updated>
 
+    
+      
+        <item>
+          <title>XML omitempty with enclosed elements</title>
+          <link>http://haibin.github.com/post/xml-omitempty-enclosing/</link>
+          <pubDate>Mon, 25 Jul 2016 23:09:02 SGT</pubDate>
+          <author>Haibin Liu</author>
+          <guid>http://haibin.github.com/post/xml-omitempty-enclosing/</guid>
+          <description>&lt;p&gt;omitempty is only used in marshalling. But it does not work with enclosed elements.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.golang.org/p/DEgzD3rwhw&#34;&gt;https://play.golang.org/p/DEgzD3rwhw&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/27246275/golang-hide-xml-parent-tag-if-empty&#34;&gt;http://stackoverflow.com/questions/27246275/golang-hide-xml-parent-tag-if-empty&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+      
     
       
         <item>
