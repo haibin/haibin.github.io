@@ -1,59 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Site </title>
+    <title>Posts on My Site</title>
     <link>http://haibin.github.com/post/</link>
+    <description>Recent content in Posts on My Site</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Haibin Liu</author>
-    <rights>(C) 2016</rights>
-    <updated>2016-07-25 23:09:02 &#43;0800 SGT</updated>
-
+    <lastBuildDate>Mon, 25 Jul 2016 23:09:02 +0800</lastBuildDate>
+    <atom:link href="http://haibin.github.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title>XML omitempty with enclosed elements</title>
+      <link>http://haibin.github.com/post/xml-omitempty-enclosing/</link>
+      <pubDate>Mon, 25 Jul 2016 23:09:02 +0800</pubDate>
       
-        <item>
-          <title>XML omitempty with enclosed elements</title>
-          <link>http://haibin.github.com/post/xml-omitempty-enclosing/</link>
-          <pubDate>Mon, 25 Jul 2016 23:09:02 SGT</pubDate>
-          <author>Haibin Liu</author>
-          <guid>http://haibin.github.com/post/xml-omitempty-enclosing/</guid>
-          <description>&lt;p&gt;omitempty is only used in marshalling. But it does not work with enclosed elements.&lt;/p&gt;
+      <guid>http://haibin.github.com/post/xml-omitempty-enclosing/</guid>
+      <description>&lt;p&gt;omitempty is only used in marshalling. But it does not work with enclosed elements.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://play.golang.org/p/DEgzD3rwhw&#34;&gt;https://play.golang.org/p/DEgzD3rwhw&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/27246275/golang-hide-xml-parent-tag-if-empty&#34;&gt;http://stackoverflow.com/questions/27246275/golang-hide-xml-parent-tag-if-empty&lt;/a&gt;&lt;/p&gt;
 </description>
-        </item>
-      
+    </item>
     
+    <item>
+      <title>XML cdata tag</title>
+      <link>http://haibin.github.com/post/xml-cdata/</link>
+      <pubDate>Sun, 24 Jul 2016 00:01:58 +0800</pubDate>
       
-        <item>
-          <title>XML cdata tag</title>
-          <link>http://haibin.github.com/post/xml-cdata/</link>
-          <pubDate>Sun, 24 Jul 2016 00:01:58 SGT</pubDate>
-          <author>Haibin Liu</author>
-          <guid>http://haibin.github.com/post/xml-cdata/</guid>
-          <description>&lt;p&gt;cdata tag is used in marshalling. It is not needed in unmarshalling.&lt;/p&gt;
+      <guid>http://haibin.github.com/post/xml-cdata/</guid>
+      <description>&lt;p&gt;cdata tag is used in marshalling. It is not needed in unmarshalling.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://play.golang.org/p/xEXFBCkC29&#34;&gt;https://play.golang.org/p/xEXFBCkC29&lt;/a&gt;&lt;/p&gt;
 </description>
-        </item>
-      
+    </item>
     
+    <item>
+      <title>First</title>
+      <link>http://haibin.github.com/post/first/</link>
+      <pubDate>Sat, 23 Jul 2016 23:08:58 +0800</pubDate>
       
-        <item>
-          <title>First</title>
-          <link>http://haibin.github.com/post/first/</link>
-          <pubDate>Sat, 23 Jul 2016 23:08:58 SGT</pubDate>
-          <author>Haibin Liu</author>
-          <guid>http://haibin.github.com/post/first/</guid>
-          <description>&lt;p&gt;This is the beginning post of the new site.&lt;/p&gt;
+      <guid>http://haibin.github.com/post/first/</guid>
+      <description>&lt;p&gt;This is the beginning post of the new site.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ls
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-        </item>
-      
+    </item>
     
-
   </channel>
 </rss>
