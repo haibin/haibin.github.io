@@ -16,9 +16,9 @@
       
       <guid>http://haibin.github.com/post/slice-operator/</guid>
       <description>&lt;p&gt;s[:] is always a slice. But s can be
-* Array or
-* Pointer to array or
-* Slice&lt;/p&gt;
+- Array or
+- Pointer to array or
+- Slice&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://play.golang.org/p/r2nc-FAmjg&#34;&gt;https://play.golang.org/p/r2nc-FAmjg&lt;/a&gt;&lt;/p&gt;
 </description>
