@@ -6,8 +6,18 @@
     <description>Recent content in Posts on My Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Jul 2016 23:09:02 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 02 Aug 2016 00:03:13 +0800</lastBuildDate>
     <atom:link href="http://haibin.github.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Slice operator</title>
+      <link>http://haibin.github.com/post/slice-operator/</link>
+      <pubDate>Tue, 02 Aug 2016 00:03:13 +0800</pubDate>
+      
+      <guid>http://haibin.github.com/post/slice-operator/</guid>
+      <description>&lt;p&gt;s VS s[:] &lt;a href=&#34;https://play.golang.org/p/VPtLJvRGoV&#34;&gt;https://play.golang.org/p/VPtLJvRGoV&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>XML omitempty with enclosed elements</title>
