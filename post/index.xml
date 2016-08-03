@@ -10,15 +10,18 @@
     <atom:link href="http://haibin.github.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Slice operator</title>
+      <title>s VS s[:]</title>
       <link>http://haibin.github.com/post/slice-operator/</link>
       <pubDate>Tue, 02 Aug 2016 00:03:13 +0800</pubDate>
       
       <guid>http://haibin.github.com/post/slice-operator/</guid>
-      <description>&lt;p&gt;s[:] is always a slice. But s can be
-- Array or
-- Pointer to array or
-- Slice&lt;/p&gt;
+      <description>&lt;p&gt;s[:] is always a slice. But s can be one of these&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A array or&lt;/li&gt;
+&lt;li&gt;A pointer to array or&lt;/li&gt;
+&lt;li&gt;A slice&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://play.golang.org/p/r2nc-FAmjg&#34;&gt;https://play.golang.org/p/r2nc-FAmjg&lt;/a&gt;&lt;/p&gt;
 </description>

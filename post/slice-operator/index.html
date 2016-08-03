@@ -7,7 +7,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <meta property="og:title" content=" Slice operator &middot;  My Site" />
+        <meta property="og:title" content=" s VS s[:] &middot;  My Site" />
         <meta property="og:site_name" content="My Site" />
         <meta property="og:url" content="http://haibin.github.com/post/slice-operator/" />
 
@@ -19,12 +19,12 @@
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@" />
         <meta name="twitter:creator" content="@" />
-        <meta name="twitter:title" content="Slice operator" />
+        <meta name="twitter:title" content="s VS s[:]" />
         <meta name="twitter:description" content="" />
         <meta name="twitter:url" content="http://haibin.github.com/post/slice-operator/" />
     
 
-        <title> Slice operator &middot;  My Site</title>
+        <title> s VS s[:] &middot;  My Site</title>
 
     
         <meta name="description" content="" />
@@ -50,14 +50,14 @@
     {
         "@context": "http://schema.org",
         "@type": "Article",
-        "headline": "Slice operator",
+        "headline": "s VS s[:]",
         "author": {
             "@type": "Person",
             "name": "http://profiles.google.com/?rel=author"
         },
         "datePublished": "2016-08-02",
         "description": "",
-        "wordCount":  20 
+        "wordCount":  23 
     }
 
     </script>
@@ -106,17 +106,20 @@
 
   			<header class="post-header">
   				<span class="post-meta">
-						<span class="post-date">2 Aug 2016</span> <span class="reading-time">| <span class="estimated-reading-time">1 min.</span> (<span class="word-count">20</span> words)</span></span>
+						<span class="post-date">2 Aug 2016</span> <span class="reading-time">| <span class="estimated-reading-time">1 min.</span> (<span class="word-count">23</span> words)</span></span>
   				</span>
   				<div class="clear"></div>
-  				<h1 class="post-title">Slice operator</h1>
+  				<h1 class="post-title">s VS s[:]</h1>
   			</header>
 
   			<section class="post-content">
-  				<p>s[:] is always a slice. But s can be
-- Array or
-- Pointer to array or
-- Slice</p>
+  				<p>s[:] is always a slice. But s can be one of these</p>
+
+<ul>
+<li>A array or</li>
+<li>A pointer to array or</li>
+<li>A slice</li>
+</ul>
 
 <p><a href="https://play.golang.org/p/r2nc-FAmjg">https://play.golang.org/p/r2nc-FAmjg</a></p>
 
@@ -127,7 +130,7 @@
             
   				</div>
   				<div class="post-share">
-  					<a class="icon-twitter" href="https://twitter.com/share?text=Slice%20operator&url=http%3a%2f%2fhaibin.github.com%2fpost%2fslice-operator%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  					<a class="icon-twitter" href="https://twitter.com/share?text=s%20VS%20s%5b%3a%5d&url=http%3a%2f%2fhaibin.github.com%2fpost%2fslice-operator%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
   						<span>Twitter</span>
   					</a>
   					<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fhaibin.github.com%2fpost%2fslice-operator%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
