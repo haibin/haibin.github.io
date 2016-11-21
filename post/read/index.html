@@ -7,24 +7,24 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <meta property="og:title" content=" s VS s[:] &middot;  My Site" />
+        <meta property="og:title" content=" Read enter/return from stdin &middot;  My Site" />
         <meta property="og:site_name" content="My Site" />
-        <meta property="og:url" content="http://haibin.github.com/post/slice-operator/" />
+        <meta property="og:url" content="http://haibin.github.com/post/read/" />
 
     
         <meta property="og:type" content="article" />
-        <meta property="og:article:published_time" content="2016-08-02T00:03:13&#43;08:00" />
+        <meta property="og:article:published_time" content="2016-11-20T23:21:17&#43;08:00" />
         
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@" />
         <meta name="twitter:creator" content="@" />
-        <meta name="twitter:title" content="s VS s[:]" />
+        <meta name="twitter:title" content="Read enter/return from stdin" />
         <meta name="twitter:description" content="" />
-        <meta name="twitter:url" content="http://haibin.github.com/post/slice-operator/" />
+        <meta name="twitter:url" content="http://haibin.github.com/post/read/" />
     
 
-        <title> s VS s[:] &middot;  My Site</title>
+        <title> Read enter/return from stdin &middot;  My Site</title>
 
     
         <meta name="description" content="" />
@@ -43,21 +43,21 @@
     
 
     
-        <link rel="canonical" href="http://haibin.github.com/post/slice-operator/" />
+        <link rel="canonical" href="http://haibin.github.com/post/read/" />
 
     
     <script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "Article",
-        "headline": "s VS s[:]",
+        "headline": "Read enter\/return from stdin",
         "author": {
             "@type": "Person",
             "name": "http://profiles.google.com/?rel=author"
         },
-        "datePublished": "2016-08-02",
+        "datePublished": "2016-11-20",
         "description": "",
-        "wordCount":  23 
+        "wordCount":  106 
     }
 
     </script>
@@ -106,22 +106,30 @@
 
   			<header class="post-header">
   				<span class="post-meta">
-						<span class="post-date">2 Aug 2016</span> <span class="reading-time">| <span class="estimated-reading-time">1 min.</span> (<span class="word-count">23</span> words)</span></span>
+						<span class="post-date">20 Nov 2016</span> <span class="reading-time">| <span class="estimated-reading-time">1 min.</span> (<span class="word-count">106</span> words)</span></span>
   				</span>
   				<div class="clear"></div>
-  				<h1 class="post-title">s VS s[:]</h1>
+  				<h1 class="post-title">Read enter/return from stdin</h1>
   			</header>
 
   			<section class="post-content">
-  				<p>s[:] is always a slice. But s can be one of these</p>
+  				<p>I want to cancel a running process by users hitting enter/return. If users hit anything else, the running process should not stop.</p>
 
-<ul>
-<li>A array or</li>
-<li>A pointer to array or</li>
-<li>A slice</li>
-</ul>
+<p>os.Stdin are of type os.File but reading stdin seems different from reading normal files. If I read a file for a single byte, f.Read returns the byte immediately.</p>
 
-<p><a href="https://play.golang.org/p/r2nc-FAmjg">https://play.golang.org/p/r2nc-FAmjg</a></p>
+<pre><code class="language-go">f, _ := os.Open(&quot;/tmp/dat&quot;)
+f.Read(make([]byte, 1))
+</code></pre>
+
+<p>But os.Stdin.Read does not return until users hit enter/return. So the below code works perfectly fine.</p>
+
+<pre><code class="language-go">go func() {
+    os.Stdin.Read(make([]byte, 1))
+    // Close a channel to stop the running process.
+}()
+</code></pre>
+
+<p>The only exception is when users hit &ldquo;ctrl+d&rdquo; (EOF). The process would stop but users did not hit enter/return.</p>
 
   			</section>
 
@@ -130,13 +138,13 @@
             
   				</div>
   				<div class="post-share">
-  					<a class="icon-twitter" href="https://twitter.com/share?text=s%20VS%20s%5b%3a%5d&url=http%3a%2f%2fhaibin.github.com%2fpost%2fslice-operator%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  					<a class="icon-twitter" href="https://twitter.com/share?text=Read%20enter%2freturn%20from%20stdin&url=http%3a%2f%2fhaibin.github.com%2fpost%2fread%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
   						<span>Twitter</span>
   					</a>
-  					<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fhaibin.github.com%2fpost%2fslice-operator%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  					<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fhaibin.github.com%2fpost%2fread%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
   						<span>Facebook</span>
   					</a>
-  					<a class="icon-gplus" href="https://plus.google.com/share?url=http%3a%2f%2fhaibin.github.com%2fpost%2fslice-operator%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+  					<a class="icon-gplus" href="https://plus.google.com/share?url=http%3a%2f%2fhaibin.github.com%2fpost%2fread%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
   						<span>Google+</span>
   					</a>
   				</div>
@@ -153,22 +161,12 @@
 
 			<nav class="post-nav">
 				
-					<a class="post-nav-item post-nav-next" href="http://haibin.github.com/post/read/">
-						<section class="post-nav-teaser">
-							<span class="post-nav-icon"><i class="icon-arrow-left"></i></span>
-							<span class="post-nav-info">
-								<h4 class="post-nav-title">Read enter/return from stdin</h4>
-								<p class="post-nav-excerpt">&hellip;</p>
-							</span>
-						</section>
-					</a>
 				
-				
-					<a class="post-nav-item post-nav-prev" href="http://haibin.github.com/post/xml-omitempty-enclosing/">
+					<a class="post-nav-item post-nav-prev" href="http://haibin.github.com/post/slice-operator/">
 						<section class="post-nav-teaser">
 							<span class="post-nav-icon"><i class="icon-arrow-right"></i></span>
 							<span class="post-nav-info">
-								<h4 class="post-nav-title">XML omitempty with enclosed elements</h4>
+								<h4 class="post-nav-title">s VS s[:]</h4>
 								<p class="post-nav-excerpt">&hellip;</p>
 							</span>
 						</section>

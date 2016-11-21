@@ -2,12 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My Site</title>
-    <link>http://haibin.github.com/</link>
+    <link>http://haibin.github.com/index.xml</link>
     <description>Recent content on My Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Aug 2016 00:03:13 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 20 Nov 2016 23:21:17 +0800</lastBuildDate>
     <atom:link href="http://haibin.github.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Read enter/return from stdin</title>
+      <link>http://haibin.github.com/post/read/</link>
+      <pubDate>Sun, 20 Nov 2016 23:21:17 +0800</pubDate>
+      
+      <guid>http://haibin.github.com/post/read/</guid>
+      <description>&lt;p&gt;I want to cancel a running process by users hitting enter/return. If users hit anything else, the running process should not stop.&lt;/p&gt;
+
+&lt;p&gt;os.Stdin are of type os.File but reading stdin seems different from reading normal files. If I read a file for a single byte, f.Read returns the byte immediately.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;f, _ := os.Open(&amp;quot;/tmp/dat&amp;quot;)
+f.Read(make([]byte, 1))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But os.Stdin.Read does not return until users hit enter/return. So the below code works perfectly fine.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;go func() {
+    os.Stdin.Read(make([]byte, 1))
+    // Close a channel to stop the running process.
+}()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The only exception is when users hit &amp;ldquo;ctrl+d&amp;rdquo; (EOF). The process would stop but users did not hit enter/return.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>s VS s[:]</title>
@@ -62,6 +88,19 @@
       <description>&lt;p&gt;This is the beginning post of the new site.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ls
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;d&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;string&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var a string
+var b string
+var c string
+var d string
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
