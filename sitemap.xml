@@ -2,44 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://haibin.github.com/post/slice-operator/</loc>
+    <loc>http://haibin.github.io/post/slice-operator/</loc>
     <lastmod>2016-08-02T00:03:13+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://haibin.github.com/post/xml-omitempty-enclosing/</loc>
+    <loc>http://haibin.github.io/post/xml-omitempty-enclosing/</loc>
     <lastmod>2016-07-25T23:09:02+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://haibin.github.com/post/xml-cdata/</loc>
+    <loc>http://haibin.github.io/post/xml-cdata/</loc>
     <lastmod>2016-07-24T00:01:58+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://haibin.github.com/post/first/</loc>
+    <loc>http://haibin.github.io/post/first/</loc>
     <lastmod>2016-07-23T23:08:58+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://haibin.github.com/categories/</loc>
+    <loc>http://haibin.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://haibin.github.com/</loc>
+    <loc>http://haibin.github.io/</loc>
     <lastmod>2016-08-02T00:03:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://haibin.github.com/post/</loc>
+    <loc>http://haibin.github.io/post/</loc>
     <lastmod>2016-08-02T00:03:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://haibin.github.com/tags/</loc>
+    <loc>http://haibin.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
