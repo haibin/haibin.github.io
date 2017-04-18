@@ -1,39 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Site</title>
-    <link>http://haibin.github.com/index.xml</link>
-    <description>Recent content on My Site</description>
+    <title>Life As A Software Engineer</title>
+    <link>http://haibin.github.com/</link>
+    <description>Recent content on Life As A Software Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Nov 2016 23:21:17 +0800</lastBuildDate>
-    <atom:link href="http://haibin.github.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Aug 2016 00:03:13 +0800</lastBuildDate>
     
-    <item>
-      <title>Read enter/return from stdin</title>
-      <link>http://haibin.github.com/post/read/</link>
-      <pubDate>Sun, 20 Nov 2016 23:21:17 +0800</pubDate>
-      
-      <guid>http://haibin.github.com/post/read/</guid>
-      <description>&lt;p&gt;I want to cancel a running process by users hitting enter/return. If users hit anything else, the running process should not stop.&lt;/p&gt;
-
-&lt;p&gt;os.Stdin are of type os.File but reading stdin seems different from reading normal files. If I read a file for a single byte, f.Read returns the byte immediately.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;f, _ := os.Open(&amp;quot;/tmp/dat&amp;quot;)
-f.Read(make([]byte, 1))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;But os.Stdin.Read does not return until users hit enter/return. So the below code works perfectly fine.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;go func() {
-    os.Stdin.Read(make([]byte, 1))
-    // Close a channel to stop the running process.
-}()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The only exception is when users hit &amp;ldquo;ctrl+d&amp;rdquo; (EOF). The process would stop but users did not hit enter/return.&lt;/p&gt;
-</description>
-    </item>
+	<atom:link href="http://haibin.github.com/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>s VS s[:]</title>
@@ -41,16 +17,8 @@ f.Read(make([]byte, 1))
       <pubDate>Tue, 02 Aug 2016 00:03:13 +0800</pubDate>
       
       <guid>http://haibin.github.com/post/slice-operator/</guid>
-      <description>&lt;p&gt;s[:] is always a slice. But s can be one of these&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;A array or&lt;/li&gt;
-&lt;li&gt;A pointer to array or&lt;/li&gt;
-&lt;li&gt;A slice&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://play.golang.org/p/r2nc-FAmjg&#34;&gt;https://play.golang.org/p/r2nc-FAmjg&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>s[:] is always a slice. But s can be one of these
+ A array or A pointer to array or A slice  https://play.golang.org/p/r2nc-FAmjg</description>
     </item>
     
     <item>
@@ -59,12 +27,9 @@ f.Read(make([]byte, 1))
       <pubDate>Mon, 25 Jul 2016 23:09:02 +0800</pubDate>
       
       <guid>http://haibin.github.com/post/xml-omitempty-enclosing/</guid>
-      <description>&lt;p&gt;omitempty is only used in marshalling. But it does not work with enclosed elements.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://play.golang.org/p/DEgzD3rwhw&#34;&gt;https://play.golang.org/p/DEgzD3rwhw&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/27246275/golang-hide-xml-parent-tag-if-empty&#34;&gt;http://stackoverflow.com/questions/27246275/golang-hide-xml-parent-tag-if-empty&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>omitempty is only used in marshalling. But it does not work with enclosed elements.
+https://play.golang.org/p/DEgzD3rwhw
+http://stackoverflow.com/questions/27246275/golang-hide-xml-parent-tag-if-empty</description>
     </item>
     
     <item>
@@ -73,10 +38,8 @@ f.Read(make([]byte, 1))
       <pubDate>Sun, 24 Jul 2016 00:01:58 +0800</pubDate>
       
       <guid>http://haibin.github.com/post/xml-cdata/</guid>
-      <description>&lt;p&gt;cdata tag is used in marshalling. It is not needed in unmarshalling.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://play.golang.org/p/xEXFBCkC29&#34;&gt;https://play.golang.org/p/xEXFBCkC29&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>cdata tag is used in marshalling. It is not needed in unmarshalling.
+https://play.golang.org/p/xEXFBCkC29</description>
     </item>
     
     <item>
@@ -85,24 +48,8 @@ f.Read(make([]byte, 1))
       <pubDate>Sat, 23 Jul 2016 23:08:58 +0800</pubDate>
       
       <guid>http://haibin.github.com/post/first/</guid>
-      <description>&lt;p&gt;This is the beginning post of the new site.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ls
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;string&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;string&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;string&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;d&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;string&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var a string
-var b string
-var c string
-var d string
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>This is the beginning post of the new site.
+$ ls  </description>
     </item>
     
   </channel>
